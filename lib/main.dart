@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kpop_cheer/songList.dart';
+import 'package:kpop_cheer/tabbar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MainTabScreen(),
     );
   }
 }
@@ -34,19 +35,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Home')),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            // 画面遷移 home->songList
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => SongList()),
-            );
-          },
-          child: Text('曲リストへ'),
-        ),
-      ),
+      //TODO: ホーム画面の内容を実装
     );
   }
 }

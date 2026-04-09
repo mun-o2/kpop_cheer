@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kpop_cheer/songDetail.dart';
+import 'package:kpop_cheer/song_practice.dart';
 
 class SongList extends StatelessWidget {
   SongList({super.key});
@@ -24,12 +24,7 @@ class SongList extends StatelessWidget {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(
-                  builder: (context) => SongDetail(
-                    title: song['title']!,
-                    artist: song['artist']!,
-                  ),
-                ),
+                MaterialPageRoute(builder: (context) => SongPractice()),
               );
             },
             child: Container(
